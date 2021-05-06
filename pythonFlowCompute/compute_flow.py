@@ -2,8 +2,12 @@ import cv2
 import numpy as np
 
     
-def calculate_flow(impath_1, impath_2):
+def compute_flow(impath_1, impath_2):
     first_frame = cv2.imread(impath_1)
+
+    if first_frame is None:
+        print("Error reading frame:", impath_1)
+        return None
 
     resize_dim = 224
     max_dim = max(first_frame.shape)
