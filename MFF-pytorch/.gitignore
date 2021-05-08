@@ -1,0 +1,18 @@
+# files types to exculde
+*.mp4
+*.h5
+
+jester/
+#*.txt
+
+__pycache__
+*.pyc
+
+model/
+#*.pth.tar
+#*.pth
+
+log/
+*.csv
+
+output/
