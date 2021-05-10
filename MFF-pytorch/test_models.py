@@ -219,7 +219,7 @@ if args.save_scores is not None:
         reorder_output[idx] = output[i]
         reorder_label[idx] = video_labels[i]
         reorder_pred[idx] = video_pred[i]
-        output_csv.append('%s;%s'%(name_list[i], categories[video_pred[i]]))
+        output_csv.append('%s;%s;%s'%(name_list[i], categories[video_pred[i]], video_labels[i]))
 
     np.savez(args.save_scores, scores=reorder_output, labels=reorder_label, predictions=reorder_pred, cf=cf)
 
